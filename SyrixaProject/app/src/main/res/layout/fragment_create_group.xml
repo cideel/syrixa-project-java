@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_background"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.create.CreateGroupFragment">
+
+    <ImageView
+        android:id="@+id/backBtn"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ic_back_button"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        />
+
+    <TextView
+        android:id="@+id/createGroupTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/create_group"
+        android:gravity="center"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/backBtn"
+        />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/groupNameET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/group_name"
+        android:padding="8dp"
+        app:hintEnabled="true"
+        app:helperTextEnabled="false"
+        android:textColorHint="#50000000"
+        android:layout_marginStart="45dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginTop="45dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/createGroupTV"
+        app:counterEnabled="false">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/groupNameText"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:inputType="text"
+            android:imeOptions="actionNext"
+            android:drawablePadding="16dp"
+            android:padding="8dp"
+            android:background="@drawable/bg_create_group"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/groupDescET"
+        android:layout_width="match_parent"
+        android:layout_height="175dp"
+        android:layout_marginTop="35dp"
+        android:hint="@string/group_description"
+        android:padding="8dp"
+        android:textColorHint="#50000000"
+        app:counterEnabled="false"
+        app:helperTextEnabled="false"
+        app:hintEnabled="true"
+        android:layout_marginStart="45dp"
+        android:layout_marginEnd="45dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/groupNameET">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/groupDescText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_create_group"
+            android:drawablePadding="16dp"
+            android:gravity="top|start"
+            android:lines="7"
+            android:minLines="1"
+            android:maxLines="15"
+            android:imeOptions="actionNext"
+            android:inputType="textMultiLine"
+            android:scrollbars="vertical"
+            android:padding="8dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/createGroupBtn"
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:textColor="@color/white"
+        android:text="@string/create_group"
+        android:layout_marginStart="45dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginTop="45dp"
+        android:backgroundTint="@color/customPurple"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/purple_container_15"
+        app:layout_constraintTop_toBottomOf="@+id/groupDescET" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

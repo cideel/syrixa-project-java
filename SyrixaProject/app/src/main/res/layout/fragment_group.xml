@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_background"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.group.GroupFragment">
+
+    <ImageView
+        android:id="@+id/backBtn"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ic_back_button"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        />
+
+    <TextView
+        android:id="@+id/groupNameTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text=""
+        tools:text ="Group 1"
+        android:gravity="center"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/backBtn"
+        />
+
+    <ImageView
+        android:id="@+id/toTaskListBtn"
+        android:layout_width="136dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_task_list_btn"
+        android:adjustViewBounds="true"
+        app:layout_constraintTop_toBottomOf="@id/groupNameTV"
+        android:layout_marginTop="34dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="33dp"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/groupMemberRV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="12dp"
+        android:paddingBottom="30dp"
+        tools:listitem="@layout/item_layout_person_group"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toTaskListBtn"
+        />
+
+    <ImageView
+        android:id="@+id/addProjectBtn"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:src="@drawable/ic_floating"
+        android:adjustViewBounds="true"
+        android:layout_marginBottom="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/addMemberBtn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:backgroundTint="@color/customPurple"
+        android:src="@drawable/baseline_group_add_24"
+        android:layout_marginEnd="16dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/groupNameTV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
